@@ -55,8 +55,12 @@
 {{ end }}
 
 {{ with .Site.Params.mastodon }}
-  <li class="list-inline-item"><a href="https://{{ .instance }}/@{{ .user }}" target="_blank" rel="me noopener noreferrer" title="mastodon" class="fa fa-mastodon fa-2x" aria-hidden="true"></a></li>
+  <li class="list-inline-item"><a href="https://{{ .instance }}/@{{ .user }}" target="_blank" rel="me noopener noreferrer" title="Mastodon" class="fa fa-mastodon fa-2x" aria-hidden="true"></a></li>
 {{ end }}
+
+{{ with .Site.Params.matrix }}
+  <li class="list-inline-item"><a href="https://matrix.to/#/@{{ .user }}:{{ .server }}" target="_blank" rel="noopener noreferrer" title="Matrix" class="fa fa-matrix-org fa-2x" aria-hidden="true"></a></li>
+{{ end  }}
 
 {{ with .Site.Social.foursquare }}
   <li class="list-inline-item"><a href="https://foursquare.com/{{.}}" target="_blank" rel="noopener noreferrer" title="Foursquare" class="fa fa-foursquare fa-2x" aria-hidden="true"></a></li>
