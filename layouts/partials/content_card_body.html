@@ -17,9 +17,9 @@
 
         <a href="{{ .RelPermalink }}" class="card-link">{{ i18n "readmore" }}&hellip;</a>
         {{ if ne .Site.Params.hideReadingTime true }}
-             (<i class="fa fa-clock" aria-hidden="true"></i>&nbsp;~{{ .ReadingTime }} Min.)
+            (<i class="fa fa-clock" aria-hidden="true"></i>&nbsp;~{{ .ReadingTime }} Min.)
         {{end}}
     {{ else }}
-        <p class="card-text">{{ .Content }}</p>
+        <div class="card-text">{{ .Content }}</div>
     {{ end }}
 </div>
