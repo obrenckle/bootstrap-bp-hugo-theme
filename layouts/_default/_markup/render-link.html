@@ -1,8 +1,9 @@
-<a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>
-{{ .Text | safeHTML }}
-{{ if strings.HasPrefix .Destination "https://amzn.to" }}&nbsp;<i class="fab fa-amazon"></i>
-{{ else if strings.HasPrefix .Destination "https://github" }}&nbsp;<i class="fab fa-github"></i>
-{{ else if strings.HasPrefix .Destination "https://" }}&nbsp;<i class="fas fa-external-link-alt"></i>
-{{ else if strings.HasPrefix .Destination "http://" }}&nbsp;<i class="fas fa-external-link-alt"></i>
-{{ end }}
+<a href="{{ .Destination | safeURL }}" {{ with .Title}} title="{{ . }}" {{ end }}{{ if strings.HasPrefix
+    .Destination "http" }} target="_blank" rel="noopener noreferrer" {{ end }}>
+    {{ .Text | safeHTML }}
+    {{ if strings.HasPrefix .Destination "https://amzn.to" }}&nbsp;<i class="fa fa-amazon" aria-hidden="true"></i>
+    {{ else if strings.HasPrefix .Destination "https://github" }}&nbsp;<i class="fa fa-github" aria-hidden="true"></i>
+    {{ else if strings.HasPrefix .Destination "https://" }}&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i>
+    {{ else if strings.HasPrefix .Destination "http://" }}&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i>
+    {{ end }}
 </a>
