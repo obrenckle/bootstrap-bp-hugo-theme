@@ -178,6 +178,11 @@
                 title="twitch" class="fa fa-twitch fa-2x" aria-hidden="true"></a></li>
 {{ end }}
 
+{{ with .Site.Params.pixelfed }}
+<li class="list-inline-item"><a href="https://{{ .instance }}/{{ .user }}" target="_blank" rel="me noopener noreferrer"
+                title="pixelfed" class="fa fa-pixelfed fa-2x" aria-hidden="true"></a></li>
+{{ end }}
+
 {{ with .Site.Social.email }}
 <li class="list-inline-item"><a href="mailto:{{.}}" title="Email" class="fa fa-envelope fa-2x" aria-hidden="true"></a>
 </li>
