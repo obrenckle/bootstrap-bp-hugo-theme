@@ -4,7 +4,7 @@
 <div class="card-body">
     <h1 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></h1>
     {{ if (not (eq .Type "page")) }}
-    <h6 class="card-subtitle mb-2 text-muted">
+    <div class="card-subtitle mb-2 text-muted">
         <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;{{ .PublishDate.Format $customDateFormat }}{{ if gt
         .Lastmod .PublishDate }}, {{ i18n "lastupdated" }} {{ .Lastmod.Format $customDateFormat }}{{ end }} -
         <i class="fa fa-user" aria-hidden="true"></i>&nbsp;{{ if reflect.IsSlice ($.Param "author") }}{{ range $.Param
@@ -14,7 +14,7 @@
         - <i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;~{{ i18n "readingTime" .ReadingTime }}
         {{ end }}
         {{ end }}
-    </h6>
+    </div>
     {{ end }}
 
     {{ if eq .Type "video" }}
