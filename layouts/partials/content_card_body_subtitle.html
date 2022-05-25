@@ -36,5 +36,5 @@
 {{- end -}}
 {{- $card_subtitle_length := len $card_subtitle_data -}}
 {{- if gt $card_subtitle_length 0 -}}
-<h6 class="card-subtitle mb-2 text-muted">{{ delimit $card_subtitle_data " - " | safeHTML }}</h6>
+<div class="card-subtitle mb-2 text-muted">{{ delimit $card_subtitle_data " - " | safeHTML }}</div>
 {{- end -}}
