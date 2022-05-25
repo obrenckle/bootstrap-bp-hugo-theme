@@ -3,6 +3,7 @@
 
 <div class="card-body">
     <h1 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></h1>
+    {{ if (not (eq .Type "page")) }}
     <h6 class="card-subtitle mb-2 text-muted">
         <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;{{ .PublishDate.Format $customDateFormat }}{{ if gt
         .Lastmod .PublishDate }}, {{ i18n "lastupdated" }} {{ .Lastmod.Format $customDateFormat }}{{ end }} -
@@ -14,6 +15,7 @@
         {{ end }}
         {{ end }}
     </h6>
+    {{ end }}
 
     {{ if eq .Type "video" }}
     {{ else if eq .Type "audio" }}
