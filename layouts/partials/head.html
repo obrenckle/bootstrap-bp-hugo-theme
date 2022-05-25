@@ -17,13 +17,15 @@ end }}
 
 {{ $themeColor := "default" }}
 {{ if .Site.Params.themeColor }}
-    {{ $themeColor = .Site.Params.themeColor }}
+{{ $themeColor = .Site.Params.themeColor }}
 {{ end }}
 
 {{ $cssforkawesome := resources.Get "/css/fork-awesome.min.css" }}
 {{ $csstheme := resources.Get (printf "/sass/main-%s.scss" $themeColor) | toCSS }}
 {{ $customcss := resources.Get "/css/custom.css" }}
-{{ $allcss := slice $cssforkawesome $csstheme $customcss | resources.Concat "/css/vendor.css" | minify | fingerprint "sha512" }}
+{{ $allcss := slice $cssforkawesome $csstheme $customcss | resources.Concat "/css/vendor.css" | minify |
+fingerprint
+"sha512" }}
 
 <link rel="stylesheet" href="{{ $allcss.RelPermalink }}" integrity="{{ $allcss.Data.Integrity }}">
 
