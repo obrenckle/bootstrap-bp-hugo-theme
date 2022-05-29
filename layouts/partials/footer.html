@@ -1,22 +1,22 @@
 <footer class="navbar-light border-top pt-4">
     <div class="container">
         <div class="row">
-            <section>
-                <div class="col-12 col-md-3 mb-3">
+            <div class="col-12 col-md-3 mb-3">
+                <section>
                     <h5>{{ .Site.Title }}</h5>
                     {{ .Site.Params.description }}
-                </div>
-            </section>
-            <section>
-                <div class="col-12 col-md-3 mb-3">
+                </section>
+            </div>
+            <div class="col-12 col-md-3 mb-3">
+                <section>
                     <h5>{{ i18n "social" }}</h5>
                     <ul class="list-unstyled list-inline">
                         {{- partial "social.html" . -}}
                     </ul>
-                </div>
-            </section>
-            <section>
-                <div class="col-12 col-md-3 mb-3">
+                </section>
+            </div>
+            <div class="col-12 col-md-3 mb-3">
+                <section>
                     <h5>{{ i18n "site" }}</h5>
                     <ul class="list-unstyled">
                         {{ range $index, $element := .Site.Menus.footer }}
@@ -30,10 +30,10 @@
                         {{ end }}
                         {{ end }}
                     </ul>
-                </div>
-            </section>
-            <section>
-                <div class="col-12 col-md-3 mb-3">
+                </section>
+            </div>
+            <div class="col-12 col-md-3 mb-3">
+                <section>
                     {{ partial "i18nlist.html" . }}
 
                     &copy; {{ now.Format "2006" }} {{ range .Site.Author }}{{ . }}{{ end }}<br />
@@ -45,7 +45,8 @@
                     {{ i18n "themeby" }} <a href="https://www.spech.de" target="_blank"
                         rel="noopener noreferrer">Sebastian
                         Pech</a>.
-                </div>
+                </section>
+            </div>
             </section>
         </div>
     </div>
