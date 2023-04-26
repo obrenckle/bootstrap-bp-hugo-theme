@@ -2,7 +2,7 @@
 {{ with .Site.Params.customDateFormat }}{{ $customDateFormat = . }}{{ end }}
 
 <div class="card-body">
-    <h1 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></h1>
+	<h1 class="card-title"><a href="{{ .RelPermalink }}">{{ with .Params.titleicon }}<i class="fa fa-{{ . }}" aria-hidden="true"></i> {{ end }}{{ .Title | markdownify }}</a></h1>
     {{ if (not (eq .Type "page")) }}
     <div class="card-subtitle mb-2 text-muted">
         <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;{{ .PublishDate.Format $customDateFormat }}{{ if gt
