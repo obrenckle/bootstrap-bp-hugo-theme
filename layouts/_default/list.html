@@ -35,6 +35,7 @@
             <div class="card">
                 <div class="card-body">  
                     <h1>{{ .Title }}</h1>
+		    {{ .Content  }}
                     <ul>
                         {{ range .Pages.ByPublishDate.Reverse }}
                             <li>{{ .PublishDate.Format $customDateFormat }} - <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></li>
