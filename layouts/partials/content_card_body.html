@@ -1,6 +1,5 @@
 <div class="card-body">
-<<<<<<< HEAD
-    <h1 class="card-title"><a href="{{ .RelPermalink }}">{{ with .Params.titleicon }}<i class="fa fa-{{ . }}" aria-hidden="true"></i> {{ end }}{{ .Title | markdownify }}</a></h1>
+    <h1 class="card-title"><a href="{{ .RelPermalink }}">{{ with .Params.titleicon }}<i class="fa fa-{{ . }}" aria-hidden="true"></i> {{ end }}{{ with .Params.titleemoji }}{{ emojify .}} {{ end }} {{ .Title | markdownify }}</a></h1>
     {{ partial "content_card_body_subtitle.html" . }}
     {{ if eq .Type "video" }}
     {{ else if eq .Type "audio" }}
