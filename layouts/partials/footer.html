@@ -34,6 +34,7 @@
             </div>
             <div class="col-12 col-md-3 mb-3">
                 <section>
+		    <h5>Méta</h5>
                     {{ partial "i18nlist.html" . }}
 
                     &copy; {{ now.Format "2006" }} {{ range .Site.Author }}{{ . }}{{ end }}<br />
