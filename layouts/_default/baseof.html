@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{.Site.Language.Lang }}">
+<html itemscope itemtype="https://schema.org/Blog" lang="{{.Site.Language.Lang }}">
     <meta charset="utf-8">
     {{- partial "seo_schema" . -}}
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
     {{- partial "head.html" . -}}
+
     <body>
         {{- partial "header.html" . -}}
         <main role="main">
@@ -12,4 +13,5 @@
         {{- partial "footer.html" . -}}
         {{- partial "js.html" . -}}
     </body>
+
 </html>
