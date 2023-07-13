@@ -3,16 +3,14 @@
         {{ if ne .Type "page" }}
             {{ if gt .Params.categories 0 }}
                 <i class="fa fa-folder text-primary" aria-hidden="true"></i>&nbsp;
-                {{ range .Params.categories }}
+                {{- range .Params.categories -}}
                     <a href="{{ "/categories/" | relLangURL }}#{{ . | urlize }}" class="badge bg-primary"><span>{{ . }}</span></a>
                 {{ end }}
                 <br />
             {{ end }}
             {{ if gt .Params.tags 0 }}
                 <i class="fa fa-tags text-secondary" aria-hidden="true"></i>&nbsp; 
-                {{ range .Params.tags }}
-                    <a href="{{ "/tags/" | relLangURL }}#{{ . | urlize }}" class="badge bg-secondary"><span>{{ . }}</span></a>
-                {{ end }}
+                {{- range .Params.tags -}}<a href="{{ "/tags/" | relLangURL }}#{{ . | urlize }}" class="badge bg-secondary"><span>{{ . }}</span></a> {{ end -}}
             {{ end }}
         {{ end }}
     </small>
