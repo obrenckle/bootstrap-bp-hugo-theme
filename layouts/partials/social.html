@@ -8,9 +8,9 @@
     title="Bitbucket" class="fa fa-bitbucket fa-2x" aria-hidden="true"></a></li>
 {{ end }}
 
-{{ with .Site.Social.jsfiddle }}
-<li class="list-inline-item"><a href="https://jsfiddle.com/{{.}}" target="_blank" rel="noopener noreferrer"
-    title="JSFiddle" class="fa fa-jsfiddle fa-2x" aria-hidden="true"></a></li>
+{{ with .Site.Social.boardgamegeek }}
+<li class="list-inline-item"><a href="https://boardgamegeek.com/user/{{.}}/" target="_blank" rel="noopener noreferrer"
+    title="BoardGameGeek" class="fa fa-boardgamegeek fa-2x" aria-hidden="true"></a></li>
 {{ end }}
 
 {{ with .Site.Social.codepen }}
@@ -53,6 +53,11 @@
     title="Foursquare" class="fa fa-foursquare fa-2x" aria-hidden="true"></a></li>
 {{ end }}
 
+{{ with .Site.Social.funkwhale }}
+<li class="list-inline-item"><a href="https://{{ .instance }}/@{{ .user }}" target="_blank" rel="noopener noreferrer"
+    title="Funkwhale" class="fa fa-funkwhale fa-2x" aria-hidden="true"></a></li>
+{{ end }}
+
 {{ with .Site.Social.github }}
 <li class="list-inline-item"><a href="https://github.com/{{.}}" target="_blank" rel="noopener noreferrer" title="GitHub"
     class="fa fa-github fa-2x" aria-hidden="true"></a></li>
@@ -90,12 +95,27 @@
 
 {{ with .Site.Params.mastodon }}
 <li class="list-inline-item"><a href="https://{{ .instance }}/@{{ .user }}" target="_blank" rel="me noopener noreferrer"
-    title="mastodon" class="fa fa-mastodon fa-2x" aria-hidden="true"></a></li>
+    title="Mastodon" class="fa fa-mastodon fa-2x" aria-hidden="true"></a></li>
+{{ end }}
+
+{{ with .Site.Params.matrix }}
+<li class="list-inline-item"><a href="https://matrix.to/#/@{{ .user }}:{{ .server }}" target="_blank"
+    rel="noopener noreferrer" title="Matrix" class="fa fa-matrix-org fa-2x" aria-hidden="true"></a></li>
 {{ end }}
 
 {{ with .Site.Social.medium}}
 <li class="list-inline-item"><a href="https://medium.com/@{{.}}" target="_blank" rel="noopener noreferrer"
     title="Medium" class="fa fa-medium fa-2x" aria-hidden="true"></a></li>
+{{ end }}
+
+{{ with .Site.Social.nextcloud }}
+<li class="list-inline-item"><a href="https://{{ .instance }}/u/{{ .user }}" target="_blank" rel="noopener noreferrer"
+   title="Nextcloud" class="fa fa-nextcloud-square fa-2x" aria-hidden="true"></a></li>
+{{ end }}
+
+{{ with .Site.Social.peertube }}
+<li class="list-inline-item"><a href="https://{{ .instance }}/c/{{ .user }}" target="_blank" rel="noopener noreferrer"
+    title="Peertube" class="fa fa-peertube fa-2x" aria-hidden="true"></a></li>
 {{ end }}
 
 {{ with .Site.Social.pinterest }}
@@ -133,6 +153,11 @@
     title="snapchat" class="fa fa-snapchat fa-2x" aria-hidden="true"></a></li>
 {{ end }}
 
+{{ with .Site.Social.spotify }}
+<li class="list-inline-item"><a href="https://open.spotify.com/user/{{.}}" target="_blank" rel="noopener noreferrer"
+    title="Spotify" class="fa fa-spotify fa-2x" aria-hidden="true"></a></li>
+{{ end }}
+
 {{ with .Site.Social.stackoverflow }}
 <li class="list-inline-item"><a href="https://stackoverflow.com/users/{{.}}" target="_blank" rel="noopener noreferrer"
     title="Stack Overflow" class="fa fa-stack-overflow fa-2x" aria-hidden="true"></a></li>
@@ -150,7 +175,7 @@
 
 {{ with .Site.Social.twitch }}
 <li class="list-inline-item"><a href="https://www.twitch.tv/{{.}}" target="_blank" rel="noopener noreferrer"
-        title="twitch" class="fa fa-twitch fa-2x" aria-hidden="true"></a></li>
+    title="twitch" class="fa fa-twitch fa-2x" aria-hidden="true"></a></li>
 {{ end }}
 
 {{ with .Site.Social.twitter }}
@@ -187,3 +212,4 @@
 <li class="list-inline-item"><a href="https://www.youtube.com/{{.}}" target="_blank" rel="noopener noreferrer"
     title="YouTube" class="fa fa-youtube fa-2x" aria-hidden="true"></a></li>
 {{ end }}
+
