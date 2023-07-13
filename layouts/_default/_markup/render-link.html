@@ -2,6 +2,8 @@
 {{ .Text | safeHTML }}
 {{ if strings.HasPrefix .Destination "https://amzn.to" }}&nbsp;<i class="fa fa-amazon" aria-hidden="true"></i>
 {{ else if strings.HasPrefix .Destination "https://github" }}&nbsp;<i class="fa fa-github" aria-hidden="true"></i>
+{{ else if strings.HasPrefix .Destination "https://www.amazon.com/" }}&nbsp;<i class="fa fa-amazon" aria-hidden="true"></i>
+{{ else if strings.HasPrefix .Destination "https://www.amazon.fr/" }}&nbsp;<i class="fa fa-amazon" aria-hidden="true"></i>
 {{ else if strings.HasPrefix .Destination "https://" }}&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i>
 {{ else if strings.HasPrefix .Destination "http://" }}&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i>
 {{ end }}
