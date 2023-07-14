@@ -10,9 +10,20 @@ You should start with the README found in the original repository, or the copy o
 
 Icons are taken from Fork-Awesome instead of Font-Awesome
 
-### Full content in RSS
+### Customizable RSS Content
 
-Whole content is output in the RSS, not just the summary.
+`params.rss_content_type = "full"` output the full content of pages in the rss feed. Anything else output the summaries.
+
+You can filter which type of page will be included in the rss feed
+`params.rss_include_type` is a list of strings containing the types that will be included in the rss feed. An `"*"` includes all types.
+`params.rss_exclude_type` is a list of strings containing the types that will be excluded from the rss feed.
+
+Exclusion are computed after inclusion, so:
+```
+params.rss_include_type = ["page"]
+params.rss_exclude_type = ["page"]
+```
+will result in an empty rss feed.
 
 ### Add some social media options
 
