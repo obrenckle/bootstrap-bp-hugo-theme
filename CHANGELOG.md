@@ -18,6 +18,6 @@
 - Social media parameters moved to params.social in config file
 - Output content of List kind pages
 
-### Fix 
+### Fixed
 - SEO content
 
