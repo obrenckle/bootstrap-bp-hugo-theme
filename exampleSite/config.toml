@@ -13,7 +13,6 @@ ignoreErrors = ["error-remote-getjson"]
 footnoteReturnLinkContents = "^"
 
 # Theme specific examples
-author = "Sebastian Pech"
 copyright = "Sebastian Pech"
 # googleAnalytics = "UA-123-45"
 enableRobotsTXT = true
@@ -32,10 +31,8 @@ theme="bootstrap-bp-hugo-theme"
     pages = "/:slug/"
     page = "/:slug/"
 
-[Author]  
-  name = "Sebastian Pech"
-
 [params]
+  author = "Sebastian Pech"
   description = "Text about the site"
   #images = ["logo.jpg"]
   # showPostSummary = true
